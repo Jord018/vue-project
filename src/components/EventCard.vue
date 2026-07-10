@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import type { Event } from './../types'
+import { ref } from 'vue'
 defineProps<{
-  msg: string
+  event: Event
 }>()
 
 const event = ref({
@@ -13,7 +14,7 @@ const event = ref({
   date: 'January 28, 2026',
   time: '12:00',
   petsAllowed: true,
-  organizer: 'Kat Laydee'
+  organizer: 'Kat Laydee',
 })
 </script>
 
