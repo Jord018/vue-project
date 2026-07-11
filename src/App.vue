@@ -10,6 +10,7 @@
         <nav>
           <Router-Link to="/">Event</Router-Link>
           <Router-Link to="/about">About</Router-Link>
+          <Router-Link to="/student">Student</Router-Link>
         </nav>
       </div>
     </header>
