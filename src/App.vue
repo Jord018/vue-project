@@ -8,7 +8,7 @@
     <header>
       <div class="wrapper">
         <nav>
-          <Router-Link to="/">Home</Router-Link>
+          <Router-Link to="/">Event</Router-Link>
           <Router-Link to="/about">About</Router-Link>
         </nav>
       </div>
