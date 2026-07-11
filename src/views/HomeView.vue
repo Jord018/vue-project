@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import EventCard from '@/components/EventCard.vue';
-import type { Event} from '@/types'
-import {ref} from 'vue'
+import EventCard from '@/components/EventCard.vue'
+import category_organize from './../components/category_organize.vue'
+import type { Event } from '@/types'
+import { ref } from 'vue'
 const events = ref<Event[]>([
   {
     id: 5928101,
@@ -12,7 +13,7 @@ const events = ref<Event[]>([
     date: 'January 28, 2026',
     time: '12:00',
     petsAllowed: true,
-    organizer: 'Kat Laydee'
+    organizer: 'Kat Laydee',
   },
   {
     id: 4582797,
@@ -23,7 +24,7 @@ const events = ref<Event[]>([
     date: 'March 14, 2026',
     time: '10:00',
     petsAllowed: true,
-    organizer: 'Fern Pollin'
+    organizer: 'Fern Pollin',
   },
   {
     id: 8419988,
@@ -34,13 +35,22 @@ const events = ref<Event[]>([
     date: 'July 22, 2026',
     time: '11:00',
     petsAllowed: false,
-    organizer: 'Carey Wales'
-  }
+    organizer: 'Carey Wales',
+  },
 ])
 </script>
 
 <template>
-  <div class="home">
-    <EventCard v-for="event in events" :key="event.id" :event="event"/>
+  <h1>Events For Good</h1>
+  <div class="events">
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <category_organize v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
+<style scoped>
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

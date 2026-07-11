@@ -1,22 +1,21 @@
 <script setup lang="ts">
-import type { Event } from './../types'
-
+import type { Event } from '@/types'
 defineProps<{
-  event: Event
+    event: Event
 }>()
 </script>
-
 <template>
-  <div class="event-card">
-    <div class="event-class">
-      <h2>{{ event.title }}</h2>
-      <span>@{{ event.time }} on {{ event.date }}</span>
+    <div class="event-card">
+        <div class="event-class">
+            <h2 >{{ event.category }}</h2>
+            <span>@{{ event.organizer }}</span>
+        </div>
     </div>
-  </div>
 </template>
 <style scoped>
 .event-class {
-  display: flex;
+  text-align: right;
+  font-size: large;
 }
 .event-card {
   padding: 20px;
@@ -30,3 +29,7 @@ defineProps<{
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
+
+
+
+    
